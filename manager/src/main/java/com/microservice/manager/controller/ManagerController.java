@@ -31,5 +31,10 @@ public class ManagerController {
         Manager managerById = managerService.getManagerById(id);
         return new ResponseEntity<>(managerById,HttpStatus.OK);
     }
+    @GetMapping("/getDevelopersUnderManager/{id}")
+    public ResponseEntity<Manager>getDevelopersUnderManager(@PathVariable("id") Integer id) throws BaseException {
+        Manager manager = managerService.getDevelopersUnderManager(id);
+        return new ResponseEntity<>(manager,HttpStatus.OK);
+    }
 
 }

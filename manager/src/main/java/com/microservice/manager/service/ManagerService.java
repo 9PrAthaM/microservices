@@ -9,4 +9,5 @@ public interface ManagerService {
     Manager createManager( Manager manager);
     List<Manager> getAllManagers();
     Manager getManagerById(Integer id) throws BaseException;
+    Manager getDevelopersUnderManager(Integer id) throws BaseException;
 }

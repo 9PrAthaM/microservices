@@ -12,6 +12,6 @@ public class GlobalExceptionalController {
     public ResponseEntity<ApiResponse>handleException(Exception e){
         String mess= e.getMessage();
         ApiResponse build = ApiResponse.builder().message(mess).build();
-        return new ResponseEntity<ApiResponse>(build, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(build, HttpStatus.NOT_FOUND);
     }
 }
